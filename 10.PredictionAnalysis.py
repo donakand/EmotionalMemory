@@ -276,7 +276,7 @@ def runPredictionParJD(fcMatFile, dataFile, SM='EmEffect', iPerm=[0], confounds=
     # leave one family out
     iCV = 0
     config.scriptlist = []
-    for el in [11,12,13,14,15,16,17,18,19,20]:
+    for el in np.unique(df['Family_ID']):
         test_index    = list(df.ix[df['Family_ID']==el].index)
         test_subjects = list(df.ix[df['Family_ID']==el]['Subject'])
         jPerm = list()
@@ -441,6 +441,8 @@ else:
     res     = sio.loadmat(outFileStats)
     fitPerm = res['fitPerm'] 
     fitMeas = res['fitMeas'] 
+
+## Gets the p-value of R-squared of our model.
 p1 = ((nPerm-np.where(np.argsort(np.ravel(fitPerm[:,1]))==0)[0][0])+1)/np.float(nPerm)
 
 
