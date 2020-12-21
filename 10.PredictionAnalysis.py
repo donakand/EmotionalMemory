@@ -116,9 +116,9 @@ def defConVec(df,confound):
 #  regressed out from the subject measure. If requested, a permutation test is also run.
 #  
 
-fcMatFile=topfolder+"/Dona_Analysis/FCMat/lastSampleLong.mat"
-dataFile=inputfolder+"/randomcsvlong.csv"
-colfile=topfolder+"/Dona_Analysis/Scripts/edgesName.mat"
+fcMatFile=topfolder+"/Dona_Analysis/FCMat/FCMatsFinal.mat"
+dataFile=inputfolder+"/CAMCanData.csv"
+colfile=topfolder+"/Dona_Analysis/Scripts/edgesNames.mat"
 df1=pd.read_csv(dataFile)
 
 ###let;s try test_index being subject number
