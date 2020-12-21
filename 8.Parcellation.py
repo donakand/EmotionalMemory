@@ -1,5 +1,7 @@
 #!/home/opt-user/Enthought/Canopy_64bit/User/bin/python
 
+# from Dubois et al. (2018)
+
 # Force matplotlib to not use any Xwindows backend.
 import matplotlib
 # core dump with matplotlib 2.0.0; use earlier version, e.g. 1.5.3
