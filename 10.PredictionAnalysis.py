@@ -367,7 +367,7 @@ for thisPerm in range(nPerm+1):
                         jPerm.append(thisPerm)
 permInds=np.vstack([np.random.permutation(range(df1.shape[0])) for i in range(nPerm)])
 np.savetxt(op.join(inputfolder,'permInds.txt'),permInds)
-
+#SM is memItemEmEnh for the emotional enhancement model. memItemPosEff for the positivity effect model. 
 runPredictionParJD(fcMatFile, dataFile, SM='memItemEmEnh', iPerm=jPerm, confounds=[], launchSubproc=False, session='REST12',decon='decon',fctype='Pearson',model='elnet', outDir = inputfolder, filterThr=0.01, keepEdgeFile='')
 if not op.isfile(outFileStats):
     fitMeas      = ['Pearson r','R-squared','nRMSD']
