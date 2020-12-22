@@ -120,9 +120,6 @@ fcMatFile=topfolder+"/Dona_Analysis/FCMat/FCMatsFinal.mat"
 dataFile=inputfolder+"/CAMCanData.csv"
 colfile=topfolder+"/Dona_Analysis/Scripts/edgesNames.mat"
 df1=pd.read_csv(dataFile)
-
-###let;s try test_index being subject number
-test_index=1
 outDir=inputfolder
 
 
