@@ -1,6 +1,6 @@
-#!/home/opt-user/Enthought/Canopy_64bit/User/bin/python
-
-# from Dubois et al. (2018)
+######
+# This code is from Dubois et al. (2018)
+#####
 
 # Force matplotlib to not use any Xwindows backend.
 import matplotlib
@@ -101,8 +101,8 @@ def load_img(volFile,maskAll,unzip):
     return data, nRows, nCols, nSlices, nTRs, img.affine, TR, img.header
 	
 #########################################################################################
-topfolder="/storage/shared/research/cinn/2015/MemModel"
-studyfolder=topfolder+"/Dona_Analysis/Preprocessing_FSLthenDubois"
+topfolder="/MemModel"
+studyfolder=topfolder+"/Preprocessing"
 allsubs=[ name for name in os.listdir(studyfolder) if os.path.isdir(os.path.join(studyfolder, name)) ]
 for subject in allsubs:
 
@@ -115,9 +115,9 @@ for subject in allsubs:
 	structfolder=inputfolder+"/reg/"
 
 	if op.isfile(niiImg):
-		if not op.isfile(inputfolder+"/output_Dubois/signalReg.nii.gz"):
+		if not op.isfile(inputfolder+"/output/signalReg.nii.gz"):
 			print("EPI exsits")
-			outDir=inputfolder+"/output_Dubois/"
+			outDir=inputfolder+"/output/"
 			if not op.isdir(outDir):
 				os.mkdir(outDir)
 			#no overwrite if "orIm.nii.gz", other values would mean: overwrite
