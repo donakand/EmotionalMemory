@@ -115,7 +115,7 @@ def getAllFC(subjectList,runs,sessions=None,parcellation=None,operations=None,ou
 				            for config.fmriRun in runs:
 
 				                outputPath = outputDir
-				                tsFile = inputfolder+subject+"/"+subject+"_NoMCNoSmoothingNonLinearRegDOF12.feat/output_Dubois/NewAllllParcels_Pearson.txt"
+				                tsFile = inputfolder+subject+"/"+subject+"_NoMCNoSmoothingNonLinearRegDOF12.feat/output/AllParcels_Pearson.txt"
 				                if tsFile:
 				                    # retrieve time courses of parcels
 				                    ts        = np.genfromtxt(tsFile,delimiter="\t")
