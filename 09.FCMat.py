@@ -1,6 +1,6 @@
-#!/home/opt-user/Enthought/Canopy_64bit/User/bin/python
-
-# from Dubois et al. (2018)
+########
+# This code is from Dubois et al. (2018)
+########
 
 # Force matplotlib to not use any Xwindows backend.
 import matplotlib
@@ -73,8 +73,8 @@ class config(object):
 	# these variables are initialized here and used later in the pipeline, do not change
 	filtering   = []
 	doScrubbing = False
-topfolder="/storage/shared/research/cinn/2015/MemModel"
-studyfolder=topfolder+"/Dona_Analysis/Preprocessing_FSLthenDubois"
+topfolder="/MemModel"
+studyfolder=topfolder+"/Preprocessing"
 subjectlist=[ name for name in os.listdir(studyfolder) if os.path.isdir(os.path.join(studyfolder, name)) ]
 inputfolder=studyfolder+"/"
 outputfolder=inputfolder
@@ -101,7 +101,7 @@ def getAllFC(subjectList,runs,sessions=None,parcellation=None,operations=None,ou
         FC_sub = list()
         ts_all = list()
         for subject in subjectList:
-            chk=inputfolder+subject+"/"+subject+"_NoMCNoSmoothingNonLinearRegDOF12.feat/output_Dubois/signalReg.nii.gz"
+            chk=inputfolder+subject+"/"+subject+"_NoMCNoSmoothingNonLinearRegDOF12.feat/output/signalReg.nii.gz"
             if (op.isfile(chk)):
 		        print("#################SUBJECT ",subject)
 		        config.subject = str(subject)
@@ -134,7 +134,7 @@ def getAllFC(subjectList,runs,sessions=None,parcellation=None,operations=None,ou
 				        mergeSessions = False
 				        for config.fmriRun in runs:
 				            outputPath = outputDir
-				            tsFile    = inputfolder+subject+"/"+subject+"_NoMCNoSmoothingNonLinearRegDOF12.feat/output_Dubois/NewAllParcels_Pearson.txt"
+				            tsFile    = inputfolder+subject+"/"+subject+"_NoMCNoSmoothingNonLinearRegDOF12.feat/output/NewAllParcels_Pearson.txt"
 				            ts        = np.genfromtxt(tsFile,delimiter=",")
 				            # standardize
 				            ts -= ts.mean(axis=0)
@@ -179,7 +179,7 @@ def getAllFC(subjectList,runs,sessions=None,parcellation=None,operations=None,ou
         return iii,jj,yy
 runs="1"
 
-[i,j,yy]=getAllFC(subjectlist,runs,sessions=None,parcellation=None,operations=None,outputDir=outputfolder,isCifti=False,fcMatFile='/storage/shared/research/cinn/2015/MemModel/Dona_Analysis/FCMat/fcMatsFinal.mat', kind='correlation',overwrite=True,FCDir=None,mergeSessions=False,mergeRuns=False,cov_estimator=None)
+[i,j,yy]=getAllFC(subjectlist,runs,sessions=None,parcellation=None,operations=None,outputDir=outputfolder,isCifti=False,fcMatFile='/MemModel/FCMat/fcMatsFinal.mat', kind='correlation',overwrite=True,FCDir=None,mergeSessions=False,mergeRuns=False,cov_estimator=None)
 print("##########Failed FCMAT")
 print(i)
 print("##############Number of completed FCMATs")
