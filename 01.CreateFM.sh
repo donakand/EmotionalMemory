@@ -1,12 +1,12 @@
 #!/bin/bash
-topDIR=/storage/shared/research/cinn/2015/MemModel
+topDIR=/MemModel
 funcDIR=${topDIR}/CamCAN_Data/func
-outputDIR=${topDIR}/Dona_Analysis/Preprocessing
-fsfDIR=${topDIR}/Dona_Analysis/Scripts/fsfs
+outputDIR=${topDIR}/Preprocessing
+fsfDIR=${topDIR}/Scripts/fsfs
 origfsf=${fsfDIR}/preprocess.fsf
 fmapdir=${topDIR}/CamCAN_Data/fmap
-opdir=${topDIR}/Dona_Analysis/FieldMaps
-cd /storage/shared/research/cinn/2015/MemModel/Dona_Analysis/Struct3
+opdir=${topDIR}/FieldMaps
+cd /MemModel/Struct3
 for subject in sub-CC*;do
 echo "#########################"
 echo "Applying BET to "${subject}
