@@ -1,13 +1,13 @@
 #!/bin/bash
-topDIR=/storage/shared/research/cinn/2015/MemModel
+topDIR=/MemModel
 funcDIR=${topDIR}/CamCAN_Data/func
-outputDIR=${topDIR}/Dona_Analysis/Preprocessing_FSLthenDubois
-fsfDIR=${topDIR}/Dona_Analysis/Scripts/FSLthenDubois/fsf
-structDIR=${topDIR}/Dona_Analysis/Struct3
-fmapdir=${topDIR}/Dona_Analysis/FieldMaps
-memDIR=/storage/shared/research/cinn/2015/MemModel/CamCAN_Data/cc700-scored/EmotionalMemory/release001/data
+outputDIR=${topDIR}/Preprocessing
+fsfDIR=${topDIR}/Scripts/FSL/fsf
+structDIR=${topDIR}/Struct
+fmapdir=${topDIR}/FieldMaps
+memDIR=/EmotionalMemory
 cd ${funcDIR}
-betepidir=${topDIR}/Dona_Analysis/BET_EPI
+betepidir=${topDIR}/BET_EPI
 dof=12
 if [ ! -e $betepidir ];then
 mkdir $betepidir
