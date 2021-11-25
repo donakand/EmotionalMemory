@@ -15,7 +15,7 @@ for subNo in EmotionalMemory_CC*;do
 subDIR=`echo $subNo | awk -F "_" '{ print $2 }'`
 sub="sub-${subDIR}"
 echo "Working on ${sub}"
-outDIR2=${outDIR}/Struct3/${sub}
+outDIR2=${outDIR}/Struct/${sub}
 mkdir  ${outDIR2}
 cd ${structDir}/${sub}/anat
 struct=`ls -d $structDir/$sub/anat/${sub}_T1w.nii.gz`
