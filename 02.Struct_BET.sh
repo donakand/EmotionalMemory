@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Change the directories as needed
-topDIR=/storage/shared/research/cinn/2015/MemModel
+topDIR=/MemModel
 structDir=${topDIR}/CamCAN_Data/anat
-outDIR=${topDIR}/Dona_Analysis
+outDIR=${topDIR}
 cd $structDir
 echo ${structDir}
-memDIR=/storage/shared/research/cinn/2015/MemModel/CamCAN_Data/cc700-scored/EmotionalMemory/release001/data
+memDIR=/EmotionalMemory
 
 # Cycle through specified subjects
 cd ${memDIR}
