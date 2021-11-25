@@ -1,19 +1,19 @@
 #!/bin/bash
 
 # Change the directories as needed
-topDIR=/storage/shared/research/cinn/2015/MemModel
+topDIR=/MemModel
 
-outDIR=${topDIR}/Dona_Analysis/Struct3
+outDIR=${topDIR}/Struct
 structDir=${outDIR}
 cd $structDir
 echo ${structDir}
-standard=/usr/share/fsl/5.0/data/standard/MNI152_T1_2mm_brain.nii.gz
+standard=/MNI152_T1_2mm_brain.nii.gz
 for subDIR in sub-CC*;do
 echo "Working on ${subDIR}"
 sub=${subDIR}
 echo "sub is " $sub
 outDIR2=${outDIR}/${subDIR}
-epidir=${topDIR}/Dona_Analysis/Preprocessing_FSLthenDubois/${sub}/${sub}_NoMCNoSmoothingNonLinearRegDOF12.feat
+epidir=${topDIR}/Preprocessing/${sub}/${sub}_NoMCNoSmoothingNonLinearRegDOF12.feat
 reg=${epidir}/reg
 t1mni=`ls -d ${reg}/highres2standard.nii.gz`
 echo $t1mni
