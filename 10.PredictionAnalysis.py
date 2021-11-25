@@ -1,6 +1,6 @@
-#!/home/opt-user/Enthought/Canopy_64bit/User/bin/python
-
-# from Dubois et al. (2018)
+#######
+# This code is from Dubois et al. (2018)
+#######
 
 # Force matplotlib to not use any Xwindows backend.
 import matplotlib
@@ -49,8 +49,8 @@ from sklearn.covariance import MinCovDet,GraphLassoCV,LedoitWolf
 #import nistats
 #from nistats import design_matrix
 i=""
-topfolder="/storage/shared/research/cinn/2015/MemModel"
-inputfolder=topfolder+"/Dona_Analysis/regularisedreg"
+topfolder="/MemModel"
+inputfolder=topfolder+"/regularisedreg"
 
 
 
@@ -80,7 +80,7 @@ class config(object):
 	# these variables are initialized here and used later in the pipeline, do not change
 	filtering   = []
 	doScrubbing = False
-	DATADIR='/storage/shared/research/cinn/2015/MemModel/Dona_Analysis/regularisedreg'
+	DATADIR='/MemModel/regularisedreg'
 	pipelineName='one'
 	release='a'
 	behavFile='a'
@@ -116,9 +116,9 @@ def defConVec(df,confound):
 #  regressed out from the subject measure. If requested, a permutation test is also run.
 #  
 
-fcMatFile=topfolder+"/Dona_Analysis/FCMat/FCMatsFinal.mat"
+fcMatFile=topfolder+"/FCMat/FCMatsFinal.mat"
 dataFile=inputfolder+"/CAMCanData.csv"
-colfile=topfolder+"/Dona_Analysis/Scripts/edgesNames.mat"
+colfile=topfolder+"/Scripts/edgesNames.mat"
 df1=pd.read_csv(dataFile)
 outDir=inputfolder
 
