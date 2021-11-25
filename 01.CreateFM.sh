@@ -6,7 +6,7 @@ fsfDIR=${topDIR}/Scripts/fsfs
 origfsf=${fsfDIR}/preprocess.fsf
 fmapdir=${topDIR}/CamCAN_Data/fmap
 opdir=${topDIR}/FieldMaps
-cd /MemModel/Struct3
+cd /MemModel/Struct
 for subject in sub-CC*;do
 echo "#########################"
 echo "Applying BET to "${subject}
