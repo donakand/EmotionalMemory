@@ -1,4 +1,7 @@
-# from Dubois et al. (2018)
+###
+# This code is taken from Dubois et al. (2018) with minor edits to change the model from 
+# Linear Regression with Elastic Net penalisation to Random Forest model
+###
 
 # Force matplotlib to not use any Xwindows backend.
 import matplotlib
