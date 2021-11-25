@@ -1,8 +1,8 @@
 #!/bin/bash
 # Change the directories as needed
-topDIR=/storage/shared/research/cinn/2015/MemModel
+topDIR=/MemModel
 structDir=${topDIR}/CamCAN_Data/anat
-inputDIR=${topDIR}/Dona_Analysis/Preprocessing_FSLthenDubois
+inputDIR=${topDIR}/Preprocessing
 cd $inputDIR
 
 
