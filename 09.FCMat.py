@@ -79,7 +79,7 @@ subjectlist=[ name for name in os.listdir(studyfolder) if os.path.isdir(os.path.
 inputfolder=studyfolder+"/"
 outputfolder=inputfolder
 
-def getAllFC(subjectList,runs,sessions=None,parcellation=None,operations=None,outputDir=None,isCifti=False,fcMatFile='/storage/shared/research/cinn/2015/MemModel/Dona_Analysis/FCMat/fcMatsFinal.mat',
+def getAllFC(subjectList,runs,sessions=None,parcellation=None,operations=None,outputDir=None,isCifti=False,fcMatFile='/MemModel/FCMat/fcMatsFinal.mat',
              kind='correlation',overwrite=True,FCDir=None,mergeSessions=True,mergeRuns=False,cov_estimator=None):
     iii=""
     jj=0
