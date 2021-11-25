@@ -30,7 +30,7 @@ set fmri(featwatcher_yn) 0
 set fmri(sscleanup_yn) 0
 
 # Output directory
-set fmri(outputdir) "/storage/shared/research/cinn/2015/MemModel/Dona_Analysis/Preprocessing_FSLthenDubois/"
+set fmri(outputdir) "/MemModel/Preprocessing/"
 
 # TR(s)
 set fmri(tr) 1.97
@@ -239,7 +239,7 @@ set fmri(regstandard_yn) 1
 set fmri(alternateReference_yn) 0
 
 # Standard image
-set fmri(regstandard) "/usr/share/fsl/data/standard/MNI152_T1_2mm_brain"
+set fmri(regstandard) "/MNI152_T1_2mm_brain"
 
 # Search space for registration to standard space
 # 0   : No search
@@ -267,19 +267,19 @@ set fmri(totalVoxels) 34209792
 set fmri(ncopeinputs) 0
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "/storage/shared/research/cinn/2015/MemModel/Dona_Analysis/Preprocessing_FSLthenDubois/mc/filtered_func_data_mc"
+set feat_files(1) "/MemModel/Preprocessing/mc/filtered_func_data_mc"
 
 # Add confound EVs text file
 set fmri(confoundevs) 0
 
 # B0 unwarp input image for analysis 1
-set unwarp_files(1) "/storage/shared/research/cinn/2015/MemModel/Dona_Analysis/FieldMaps/fmap"
+set unwarp_files(1) "/MemModel/FieldMaps/fmap"
 
 # B0 unwarp mag input image for analysis 1
-set unwarp_files_mag(1) "/storage/shared/research/cinn/2015/MemModel/Dona_Analysis/FieldMaps/magBET"
+set unwarp_files_mag(1) "/MemModel/FieldMaps/magBET"
 
 # Subject's structural image for analysis 1
-set highres_files(1) "/storage/shared/research/cinn/2015/MemModel/Dona_Analysis/Struct/721729/T1_brain"
+set highres_files(1) "/MemModel/Struct/721729/T1_brain"
 
 # EV 1 title
 set fmri(evtitle1) ""
