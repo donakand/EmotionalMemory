@@ -1,5 +1,9 @@
 #!/bin/bash 
-# from Glasser et al. (2013)
+
+#######
+# This code is from Glasser et al. (2013)
+#######
+
 
 # --------------------------------------------------------------------------------
 #  Load Function Libraries
@@ -13,12 +17,12 @@
 
 echo "MotionCorrection.sh"
 echo "START"
-topdir=/storage/shared/research/cinn/2015/MemModel
-cd /storage/shared/research/cinn/2015/MemModel/Dona_Analysis/Struct3
+topdir=/MemModel
+cd /MemModel/Struct
 for subject in sub-CC*;do
 funcDIR=${topdir}/CamCAN_Data/func
 fMRIinFolder=${funcDIR}/${subject}/func
-fMRIopFolder=${topdir}/Dona_Analysis/Preprocessing_FSLthenDubois/${subject}
+fMRIopFolder=${topdir}/Preprocessing/${subject}
 if [ ! -e $fMRIopFolder ];then
 mkdir $fMRIopFolder
 fi
