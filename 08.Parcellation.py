@@ -1,6 +1,6 @@
-#!/home/opt-user/Enthought/Canopy_64bit/User/bin/python
-
-# from Dubois et al. (2018)
+########
+# This code is from Dubois et al. (2018)
+########
 
 # Force matplotlib to not use any Xwindows backend.
 import matplotlib
@@ -50,22 +50,22 @@ from sklearn.covariance import MinCovDet,GraphLassoCV,LedoitWolf
 #from nistats import design_matrix
 i=""
 
-topfolder="/storage/shared/research/cinn/2015/MemModel"
-studyfolder=topfolder+"/Dona_Analysis/Preprocessing_FSLthenDubois"
+topfolder="/MemModel"
+studyfolder=topfolder+"/Preprocessing"
 allsubs=[ name for name in os.listdir(studyfolder) if os.path.isdir(os.path.join(studyfolder, name)) ]
 for subject in allsubs:
 	print(subject)
 	inputfolder=studyfolder+"/"+subject+"/"+subject+"_NoMCNoSmoothingNonLinearRegDOF12.feat"
-	niiImg=inputfolder+"/output_Dubois/signalReg.nii.gz"
+	niiImg=inputfolder+"/output/signalReg.nii.gz"
 	motionFile = studyfolder+"/"+subject+"/mc/Movement_Regressors2.txt"
 	subno=subject[6:12]
-	structfolder=topfolder+"/Dona_Analysis/Struct/"+subno+"/"
+	structfolder=topfolder+"/Struct/"+subno+"/"
 	maskAll=inputfolder+"/filtered_func_mc_standard_mask.nii.gz"
 	overwrite=True
 	if op.isfile(niiImg):
 		print("### EPI found")
-		outDir=inputfolder+"/output_Dubois/"
-		if not op.isfile(inputfolder+"/output_Dubois/allParcels.txt"):
+		outDir=inputfolder+"/output/"
+		if not op.isfile(inputfolder+"/output/allParcels.txt"):
 			print("Applying parcellation")
 		#	try:
 			#----------------------------------
@@ -121,7 +121,7 @@ for subject in allsubs:
 
 
 #################### Starting Parcellation
-		if not op.isfile(inputfolder+"/output_Dubois/allParcels.txt"):
+		if not op.isfile(inputfolder+"/output/allParcels.txt"):
 			# After preprocessing, functional connectivity is computed
 			[loaded_image, nRows, nCols, nSlices, nTRs, affine, TR,header]=load_img(niiImg,None,False)
 			TR=1.97
