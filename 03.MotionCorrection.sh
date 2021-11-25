@@ -36,7 +36,7 @@ InputfMRI=${fMRIinFolder}/${subject}_task-Rest_bold.nii.gz
 echo $InputfMRI
 
 #fslroi "$InputfMRI" $WorkingDirectory"/scout" 0 1
-HCPPIPEDIR_Global=/storage/shared/research/cinn/2015/MemModel/Dona_Analysis/Scripts/Preprocessing_HCP/copy3HCPpipelines-4.0.0/global/scripts
+HCPPIPEDIR_Global=/MemModel/Scripts/Preprocessing_HCP/copy3HCPpipelines-4.0.0/global/scripts
 Scout=""
 OutputfMRI=$WorkingDirectory/filtered_func_data_mc
 OutputMotionRegressors=${WorkingDirectory}/Movement_Regressors
